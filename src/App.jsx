@@ -41,7 +41,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/financing" element={<Financig email={email} />} />
+          <Route path="/Financing" element={<Financig email={email} />} />
           <Route path="/user-profile" element={<UserProfile email={email} />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>

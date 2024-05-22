@@ -1,36 +1,41 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import QRCode from "qrcode.react";
 
 import Section from "@/components/Section";
 
-const delear1 = {
-  ingresos: [2000, 0],
-  domicilio: [6, 25],
-  edad: [18, 50],
-  cuotaInicial: [2000, 25],
-};
-const delear2 = {
-  ingresos: [4000, 25],
-  domicilio: [12, 25],
-  edad: [25, 25],
-  cuotaInicial: [500, 25],
-};
-const delear3 = {
-  ingresos: [2000, 15],
-  domicilio: [12, 10],
-  edad: [28, 25],
-  cuotaInicial: [4000, 50],
-};
+
+// const delear1 = {
+//   ingresos: [2000, 0],
+//   domicilio: [6, 25],
+//   edad: [18, 50],
+//   cuotaInicial: [2000, 25],
+// };
+// const delear2 = {
+//   ingresos: [4000, 25],
+//   domicilio: [12, 25],
+//   edad: [25, 25],
+//   cuotaInicial: [500, 25],
+// };
+// const delear3 = {
+//   ingresos: [2000, 15],
+//   domicilio: [12, 10],
+//   edad: [28, 25],
+//   cuotaInicial: [4000, 50],
+// };
 
 let porcentaje1 = 0;
 let porcentaje2 = 0;
 let porcentaje3 = 0;
+
+
 
 const Financing = ({ email }) => {
   const [edad, setEdad] = useState(0);
   const [domicilio, setDomicilio] = useState(0);
   const [cuotaInicial, setCuotaInicial] = useState(0);
   const [ingresos, setIngresos] = useState(0);
+  const [qrLink, setQrLink] = useState('');
 
   const [resultado1, setResultado1] = useState(0);
   const [resultado2, setResultado2] = useState(0);
@@ -85,21 +90,35 @@ const Financing = ({ email }) => {
 
   return (
     <>
-      <Section title="Calcular Financiacion">
+      <Section title="Informacion de la mascota">
         <div className="pt-10">
           <form className="flex flex-col mx-10 gap-4 my-16 p-6 shadow-lg rounded-lg shadow-black">
-            <label className="ml-4">Edad</label>
+            <label className="ml-4">ID</label>
             <input
               type="text"
               className="input input-primary"
-              name="edad"
+              name="ID"
               onChange={(e) => setEdad(e.target.value)}
             />
-            <label className="ml-4">Ingresos</label>
+            <label className="ml-4">Nombre del sueño</label>
             <input
               type="text"
               className="input input-primary"
-              name="ingresos"
+              name="Nombre del sueño"
+              onChange={(e) => setIngresos(e.target.value)}
+            />
+            <label className="ml-4">Nombre de mascota</label>
+            <input
+              type="text"
+              className="input input-primary"
+              name="Nombre de mascota"
+              onChange={(e) => setIngresos(e.target.value)}
+            />
+            <label className="ml-4">Raza</label>
+            <input
+              type="text"
+              className="input input-primary"
+              name="Raza"
               onChange={(e) => setIngresos(e.target.value)}
             />
             <label className="ml-4">Domicilio</label>
@@ -109,20 +128,21 @@ const Financing = ({ email }) => {
               name="domicilio"
               onChange={(e) => setDomicilio(e.target.value)}
             />
-            <label className="ml-4">Cuota Inicial</label>
+            <label className="ml-4">Telefono</label>
             <input
               type="text"
               className="input input-primary"
               name="cuotaInicial"
               onChange={(e) => setCuotaInicial(e.target.value)}
             />
+            
             <button className="btn brn-primary  " onClick={calcularSolicitud}>
-              Iniciar solicitud
+              Generar QR
             </button>
           </form>
 
-          <div className=" flex flex-col gap-4 items-center justify-center mx-10 ">
-            <div className="flex flex-col md:flex-row gap-6 w-full items-start md:items-center justify-between shadow-black shadow-lg rounded-xl p-4">
+          {/* <div className=" flex flex-col gap-4 items-center justify-center mx-10 "> */}
+            {/* <div className="flex flex-col md:flex-row gap-6 w-full items-start md:items-center justify-between shadow-black shadow-lg rounded-xl p-4">
               <article className="flex gap-2 items-center justify-center">
                 <p className="font-bold text-xl">Edad:</p>
                 <p>{edad}</p>
@@ -139,11 +159,11 @@ const Financing = ({ email }) => {
                 <p className="font-bold text-xl">Couta Inicial:</p>
                 <p>{cuotaInicial}</p>
               </article>
-            </div>
-            <div className="grid md:grid-cols-3 grid-cols-1 gap-10 mt-10">
+            </div> */}
+            {/* <div className="grid md:grid-cols-3 grid-cols-1 gap-10 mt-10">
               <article className=" max-w-[300px] shadow-md shadow-black p-6 rounded-xl ">
                 <p className="text-lg">
-                  Porcentaje con el Dealer{" "}
+                  Porcenggtaje con el Dealer{" "}
                   <span className="text-primary">#1</span>
                 </p>
                 <p className="text-center mt-6 text-primary font-bold text-3xl">
@@ -168,8 +188,8 @@ const Financing = ({ email }) => {
                   {resultado3}%
                 </p>
               </article>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
         </div>
       </Section>
     </>

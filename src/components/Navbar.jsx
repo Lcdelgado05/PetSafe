@@ -54,7 +54,7 @@ const Navbar = ({ setUser, user }) => {
                     user ? "" : "hidden"
                   }`}
                 >
-                  Financiación
+                  INFORMACIÓN
                 </li>
               </Link>
               <Link to="/login">
@@ -106,7 +106,7 @@ const Navbar = ({ setUser, user }) => {
           <div className="text-white w-[20%] text-lg">
             <Link to="/">
               <h2>
-                Dealer<span className="text-primary">App</span>
+                Pet<span className="text-primary">safe</span>
               </h2>
             </Link>
           </div>

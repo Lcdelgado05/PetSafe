@@ -58,7 +58,7 @@ const Register = () => {
         }`}
       >
         <div className="flex items-center justify-center lg:w-1/2 ">
-          <img src="/register.png" className="w-[300px] lg:w-[600px] " />
+          <img src="/dog.png" className="w-[300px] lg:w-[600px] " />
         </div>
 
         <div className="divider lg:divider-horizontal" />

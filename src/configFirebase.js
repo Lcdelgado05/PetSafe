@@ -4,12 +4,13 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDqV4KA4xkd7yWLw5ggKOiQxJlRH06XGTE",
-  authDomain: "dealer-app-a4d2a.firebaseapp.com",
-  projectId: "dealer-app-a4d2a",
-  storageBucket: "dealer-app-a4d2a.appspot.com",
-  messagingSenderId: "963100383143",
-  appId: "1:963100383143:web:7ad96640643eca75804882",
+  apiKey: "AIzaSyB2B_0uZlrCBRNi0g-_ptS_PDz3vtP_jHU",
+  authDomain: "petsafe-a2cff.firebaseapp.com",
+  projectId: "petsafe-a2cff",
+  storageBucket: "petsafe-a2cff.appspot.com",
+  messagingSenderId: "232783336193",
+  appId: "1:232783336193:web:104bc1303aa19087484100",
+  measurementId: "G-D9TJXPL9CN",
 };
 const appFirebase = initializeApp(firebaseConfig);
 export const auth = getAuth(appFirebase);
