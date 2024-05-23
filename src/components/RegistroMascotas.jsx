@@ -77,6 +77,7 @@ const RegistroMascotas = ({ email }) => {
               onChange={(e) => setNombreMascota(e.target.value)}
               value={NombreMascota}
             />
+            
             <label className="ml-4">Raza</label>
             <input
               type="text"
