@@ -1,12 +1,7 @@
 import React, { useState } from "react";
-
 import { db } from "@/configFirebase";
 import { collection, getDocs } from "firebase/firestore";
-
 import { useEffect } from "react";
-import Label from "@/components/Label";
-import { v4 } from "uuid";
-import { MdLibraryAdd } from "react-icons/md";
 import Section from "@/components/Section";
 const Home = () => {
   const [data, setData] = useState([]);

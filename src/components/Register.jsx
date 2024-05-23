@@ -11,11 +11,15 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [cPassword, setCPassword] = useState("");
-
   const [reset, setReset] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const redirect = useNavigate();
+
+  const generateId = () => {
+  const timestamp = Date.now().toString(36);
+  const randomPart = Math.random().toString(36).substr(2, 5);
+  return `${timestamp}-${randomPart}`;
+};
 
   const registrarUsuarioBD = (e) => {
     e.preventDefault();
