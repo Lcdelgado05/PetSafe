@@ -3,34 +3,81 @@ import { db } from "@/configFirebase";
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect } from "react";
 import Section from "@/components/Section";
+import { Link } from "react-router-dom";
+
+import dog from "@/assets/mascotas/dog.png";
+import cat from "@/assets/mascotas/cat.png";
+import mouse from "@/assets/mascotas/mouse.png";
+
 const Home = () => {
-  const [data, setData] = useState([]);
+  const productGallery =[
+  {
+    id: 1,
+    name: "dog",
+    title: "FOR DOGS",
+    subtitle: "description",
+    cop: "COP",
+    usd: "USD",
+    image: dog,
+    link: "/contact",
+  },
+  {
+    id: 2,
+    name: "cat",
+    title: "FOR CAT",
+    subtitle: "description",
+    cop: "COP",
+    usd: "USD",
+    image: cat,
+  },
+  {
+    id: 3,
+    name: "Mouse",
+    title: "FOR RODENTS",
+    subtitle: "description",
+    cop: "COP",
+    usd: "USD",
+    image: mouse,
+  },
+];
+  
+  // // const [data, setData] = useState([]);
+  // const getFiles = async () => {
+  //   const x = [];
 
-  const getFiles = async () => {
-    const x = [];
+  
+  //  };
 
-    try {
-      const querySnapshot = await getDocs(collection(db, "vehiculos"));
-      querySnapshot.forEach((doc) => {
-        const y = doc.data();
-        y["id"] = doc.id;
-        x.push(y);
-      });
-      setData(x);
-    } catch (error) {
-      error.message;
-    }
-  };
-
-  useEffect(() => {
-    getFiles();
-  }, []);
+  // useEffect(() => {
+  //   getFiles();
+  // }, []);
 
   return (
+  
     <>
       <Section title="mascotas">
-        <div className=" grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-8  items-center justify-center">
-
+      <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
+          {productGallery.map((product) => (
+            <figure key={product.id} className="relative bg-white shadow-md rounded-lg overflow-hidden">
+              <img src={product.image} alt={product.name} className="w-full h-48 object-cover"/>
+              <div className="p-4">
+                <h2 className="text-xl font-bold mb-2">{product.title}</h2>
+                <p className="text-gray-700 mb-2">{product.subtitle}</p>
+                <p className="text-gray-900 font-bold">{product.cop}</p>
+                <p className="text-gray-900 font-bold">{product.usd}</p>
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 bg-black bg-opacity-50">
+                <a
+                  href={product.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-primary text-white px-4 py-2 rounded"
+                >
+                  Ver Productos
+                </a>
+              </div>
+            </figure>
+          ))}
         </div>
         <div className="btn-group mt-36 ">
           <button className="btn bg-primary">1</button>
