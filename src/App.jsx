@@ -3,6 +3,7 @@ import Login from "@/components/Login";
 import Home from "@/components/Home";
 import Contact from "@/components/Contact";
 import Financig from "@/components/RegistroMascotas";
+import Dog from "@/components/Dog";
 import UserProfile from "@/components/UserProfile";
 import Navbar from "@/components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -12,6 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { auth } from "@/configFirebase";
 import { onAuthStateChanged } from "firebase/auth";
 import Admin from "@/components/Admin";
+import Qr from "@/components/Qr";
 
 const App = () => {
   const [user, setUser] = useState(false);
@@ -37,6 +39,8 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/dog" element={<Dog />} />
+          <Route path="/qr/:id" element={<Qr />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
