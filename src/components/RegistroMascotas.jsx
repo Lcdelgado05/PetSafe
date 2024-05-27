@@ -4,7 +4,6 @@ import QRCode from "qrcode.react";
 import { collection, doc, setDoc } from "firebase/firestore";
 import { db } from "../configFirebase";
 import Section from "@/components/Section";
-import { useNavigate, useParams } from "react-router-dom";
 
 const generateId = () => {
   const timestamp = Date.now().toString(36);
@@ -13,7 +12,6 @@ const generateId = () => {
 };
 
 const RegistroMascotas = ({ email }) => {
-  const redirect = useNavigate();
   const [id, setId] = useState(generateId());
   const [NombreDueño, setNombreDueño] = useState("");
   const [NombreMascota, setNombreMascota] = useState("");
@@ -28,15 +26,7 @@ const RegistroMascotas = ({ email }) => {
     e.preventDefault(); // Previene la recarga de la página al enviar el formulario
 
     // Validación de los campos
-    if (
-      !NombreDueño ||
-      !NombreMascota ||
-      !Direccion ||
-      !Raza ||
-      !Telefono ||
-      !Correo ||
-      !Descripcion
-    ) {
+    if (!NombreDueño || !NombreMascota || !Direccion || !Raza || !Telefono || !Correo || !Descripcion) {
       toast.error("Por favor, completa todos los campos antes de enviar.");
       return;
     }
@@ -53,11 +43,10 @@ const RegistroMascotas = ({ email }) => {
         Telefono,
         Correo,
         Descripcion,
-        email,
+        email: email || Correo, // Usa el email prop si está definido, sino usa Correo del estado
       });
-      setQrLink(`https://yourwebsite.com/solicitud/${id}`); // Actualiza con tu URL base
+      setQrLink(`https://nbl6b2l5-5173.use2.devtunnels.ms//Mascotas/${id}`); // Actualiza con tu URL base
       toast.success("Procesando Solicitud...");
-      redirect(`/qr/${id}`);
     } catch (error) {
       console.error("Error al guardar la información: ", error);
       toast.error("Error al guardar la información");
@@ -68,10 +57,7 @@ const RegistroMascotas = ({ email }) => {
     <>
       <Section title="REGISTRAR MASCOTA">
         <div className="pt-10">
-          <form
-            className="flex flex-col mx-10 gap-4 my-16 p-20 shadow-lg rounded-lg shadow-black"
-            onSubmit={calcularSolicitud}
-          >
+          <form className="flex flex-col mx-10 gap-4 my-16 p-20 shadow-lg rounded-lg shadow-black" onSubmit={calcularSolicitud}>
             <label className="ml-4">ID</label>
             <span className="ml-4">{id}</span>
             <label className="ml-4">Nombre del dueño</label>
@@ -90,8 +76,7 @@ const RegistroMascotas = ({ email }) => {
               onChange={(e) => setNombreMascota(e.target.value)}
               value={NombreMascota}
             />
-
-            <label className="ml-4">Raza</label>
+            <label className="ml-4">Animal/Raza</label>
             <input
               type="text"
               className="input input-primary w-full p-2"
@@ -139,9 +124,6 @@ const RegistroMascotas = ({ email }) => {
             <div className="flex flex-col items-center mt-6">
               <h2>Código QR</h2>
               <QRCode value={qrLink} />
-              <p>
-                Escanea este código QR para ver la información de la solicitud
-              </p>
             </div>
           )}
         </div>
