@@ -1,77 +1,68 @@
 import React from "react";
 import Section from "@/components/Section";
 
-import dog1 from "@/assets/dog/dog1.jpeg";
-import dog2 from "@/assets/dog/dog2.jpeg";
-import dog3 from "@/assets/dog/dog3.jpeg";
-import dog4 from "@/assets/dog/dog4.jpeg";
-import dog5 from "@/assets/dog/dog5.png";
-import dog6 from "@/assets/dog/dog6.jpeg";
-import dog7 from "@/assets/dog/dog7.jpeg";
-import dog8 from "@/assets/dog/dog8.png";
+import cat1 from "@/assets/cat/img1.png";
+import cat2 from "@/assets/cat/img2.png";
+import cat3 from "@/assets/cat/img3.png";
+import cat4 from "@/assets/cat/img4.png";
+import cat5 from "@/assets/cat/img5.png";
+import cat6 from "@/assets/cat/img6.png";
+import cat9 from "@/assets/cat/img9.png";
 import Slider from "@/components/Slider";
-const Dog = () => {
+const Cat = () => {
   const coursesLink = [
     {
       id: 1,
-      img: dog1,
-      title: "Juguete para perro",
+      img: cat1,
+      title: "Alimento para gato Cat",
       description: "descripcion producto 1",
       price: "500.000",
       link: "",
     },
     {
       id: 2,
-      img: dog2,
-      title: "Juguete para perro",
+      img: cat2,
+      title: "Alimento para Gato Don Kat",
       description: "descripcion",
       price: "500.000",
       link: "",
     },
     {
       id: 3,
-      img: dog3,
-      title: "Juguete para perro",
+      img: cat3,
+      title: "Alimento para gato Dali",
       description: "descripcion",
       price: "500.000",
       link: "",
     },
     {
       id: 4,
-      img: dog4,
-      title: "Alimento para perro Dog Chow",
+      img: cat4,
+      title: "Alimento para gato Whiskas",
       description: "descripcion",
       price: "500.000",
       link: "",
     },
     {
       id: 5,
-      img: dog5,
-      title: "Alimento para perro Proplan",
+      img: cat5,
+      title: "Juguete para gato",
       description: "descripcion",
       price: "500.000",
       link: "",
     },
     {
       id: 6,
-      img: dog6,
-      title: "Alimento para perro Chunky",
+      img: cat6,
+      title: "Juguete para pe",
       description: "descripcion",
       price: "500.000",
       link: "",
     },
     {
       id: 7,
-      img: dog7,
-      title: "Alimento para perro Pedigree",
-      description: "descripcion",
-      price: "500.000",
-      link: "",
-    },
-    {
-      id: 8,
-      img: dog8,
-      title: "Casa para Perro",
+      img: cat9,
+      title: "titulo",
       description: "descripcion",
       price: "500.000",
       link: "",
@@ -84,12 +75,12 @@ const Dog = () => {
       <section title="hola" className={` lg:mx-56 lg:py-56 mx-2 py-6  flex-col relative `}>
         <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1] ">
           <h2 className="font-bold text-4xl my-8 text-center text-transparent bg-clip-text  bg-gradient-to-r from-primary to-[#00CEF5]  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 md:text-5xl capitalize ">
-           Productos para perros
+           Productos para Gatos
             <br className="sm:block hidden" />
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  w-full gap-10 mb-16  ">
+        <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  w-full gap-10 mb-16  ">
           {coursesLink.map(({ id, img, title, description, price }) => (
             <div
               key={id}
@@ -121,4 +112,4 @@ const Dog = () => {
   );
 };
 
-export default Dog;
+export default Cat;

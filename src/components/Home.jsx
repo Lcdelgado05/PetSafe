@@ -30,7 +30,7 @@ const Home = () => {
       cop: "COP",
       usd: "USD",
       image: cat,
-      link: "/register",
+      link: "/cat",
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ const Home = () => {
       cop: "COP",
       usd: "USD",
       image: mouse,
-      link: "/register",
+      link: "/roudents",
     },
   ];
 

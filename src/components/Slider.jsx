@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
-import Image1 from "@/assets/slider/img1.jpg";
-import Image2 from "@/assets/slider/img2.jpg";
-import Image3 from "@/assets/slider/img3.jpg";
-import Image4 from "@/assets/slider/img4.jpg";
+import Image11 from "@/assets/slider/img11.png";
+import Image7 from "@/assets/slider/img7.png";
+import Image8 from "@/assets/slider/img8.png";
+import Image9 from "@/assets/slider/img9.png";
+import Image10 from "@/assets/slider/img10.png";
 
 const Slider = () => {
   const slides = [
@@ -13,7 +14,7 @@ const Slider = () => {
       name: "Q3 TRENDS TO WATCH",
       description:
         "In Q3 2023, the consumer packaged goods (CPG) industry continued to face a substantial threat of class-action activity, with continued filings against companies in the food, beverage, and personal care spaces. Recent months have also seen significant regulatory developments on both the federal and state levels.",
-      image: Image1,
+      image: Image11,
       from: "from-[#000000]",
     },
     {
@@ -21,7 +22,7 @@ const Slider = () => {
       name: "MAXIMIZE RECOVERY, MINIMIZE LOSS",
       description:
         "When a hurricane hits, some of the most significant losses involve interruption to normal business operations. First-party property coverage can protect businesses in such losses, yet this insurance is among the most complicated. Perkins Coie’s Insurance Recovery team assists policyholders with first-party property coverage and is available to guide policyholders.",
-      image: Image2,
+      image: Image7,
       from: "from-[#000000]",
     },
     {
@@ -29,7 +30,7 @@ const Slider = () => {
       name: "LEGAL EXECELLENCE",
       description:
         "Law360 has recognized Perkins Coie as a Regional Powerhouse law firm for delivering litigation success to its clients across the Pacific Northwest and for providing AI-related counsel to global technology clients, among other aspects of the firm's legal work.",
-      image: Image3,
+      image: Image8,
       from: "from-[#000000]",
     },
     {
@@ -37,7 +38,15 @@ const Slider = () => {
       name: "MIDYEAR TRENDS TO WATCH",
       description:
         "In the first half of 2023, the consumer packaged goods (CPG) industry continued to face a substantial threat of class-action activity, with continued filings against companies in the food, beverage, and personal care spaces. Recent months have also seen significant regulatory developments on both the federal and state levels.",
-      image: Image4,
+      image: Image10,
+      from: "from-[#000000]",
+    },
+    {
+      id: 5,
+      name: "MIDYEAR TRENDS TO WATCH",
+      description:
+        "In the first half of 2023, the consumer packaged goods (CPG) industry continued to face a substantial threat of class-action activity, with continued filings against companies in the food, beverage, and personal care spaces. Recent months have also seen significant regulatory developments on both the federal and state levels.",
+      image: Image9,
       from: "from-[#000000]",
     },
   ];
