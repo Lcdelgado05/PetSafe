@@ -45,7 +45,7 @@ const RegistroMascotas = ({ email }) => {
         Descripcion,
         email: email || Correo, // Usa el email prop si está definido, sino usa Correo del estado
       });
-      setQrLink(`https://nbl6b2l5-5173.use2.devtunnels.ms//Mascotas/${id}`); // Actualiza con tu URL base
+      setQrLink(`https://cgg1g678-5173.use2.devtunnels.ms/Mascotas/${id}`); // Actualiza con tu URL base
       toast.success("Procesando Solicitud...");
     } catch (error) {
       console.error("Error al guardar la información: ", error);

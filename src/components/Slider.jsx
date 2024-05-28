@@ -11,41 +11,41 @@ const Slider = () => {
   const slides = [
     {
       id: 1,
-      name: "Q3 TRENDS TO WATCH",
+      name: "",
       description:
-        "In Q3 2023, the consumer packaged goods (CPG) industry continued to face a substantial threat of class-action activity, with continued filings against companies in the food, beverage, and personal care spaces. Recent months have also seen significant regulatory developments on both the federal and state levels.",
+        "",
       image: Image11,
       from: "from-[#000000]",
     },
     {
       id: 2,
-      name: "MAXIMIZE RECOVERY, MINIMIZE LOSS",
+      name: "",
       description:
-        "When a hurricane hits, some of the most significant losses involve interruption to normal business operations. First-party property coverage can protect businesses in such losses, yet this insurance is among the most complicated. Perkins Coie’s Insurance Recovery team assists policyholders with first-party property coverage and is available to guide policyholders.",
+        "",
       image: Image7,
       from: "from-[#000000]",
     },
     {
       id: 3,
-      name: "LEGAL EXECELLENCE",
+      name: "",
       description:
-        "Law360 has recognized Perkins Coie as a Regional Powerhouse law firm for delivering litigation success to its clients across the Pacific Northwest and for providing AI-related counsel to global technology clients, among other aspects of the firm's legal work.",
+        "",
       image: Image8,
       from: "from-[#000000]",
     },
     {
       id: 4,
-      name: "MIDYEAR TRENDS TO WATCH",
+      name: "",
       description:
-        "In the first half of 2023, the consumer packaged goods (CPG) industry continued to face a substantial threat of class-action activity, with continued filings against companies in the food, beverage, and personal care spaces. Recent months have also seen significant regulatory developments on both the federal and state levels.",
+        "",
       image: Image10,
       from: "from-[#000000]",
     },
     {
       id: 5,
-      name: "MIDYEAR TRENDS TO WATCH",
+      name: "",
       description:
-        "In the first half of 2023, the consumer packaged goods (CPG) industry continued to face a substantial threat of class-action activity, with continued filings against companies in the food, beverage, and personal care spaces. Recent months have also seen significant regulatory developments on both the federal and state levels.",
+        "",
       image: Image9,
       from: "from-[#000000]",
     },
@@ -117,7 +117,7 @@ const Slider = () => {
           </p>
           <p className="max-w-[500px]">{slides[currentIndex].description}</p>
           <div className="mt-6 flex items-center gap-2 hover:text-primary">
-            <p className="uppercase font-bold ">learn more</p>
+            <p className="uppercase font-bold "></p>
             <BsChevronCompactRight />
           </div>
         </div>
