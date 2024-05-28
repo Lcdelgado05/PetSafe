@@ -89,6 +89,15 @@ const Navbar = ({ setUser, user }) => {
                   Lista
                 </li>
               </Link>
+              <Link to="/user-profile">
+                <li
+                  className={`p-4 uppercase duration-300 hover:text-primary hover:scale-110 cursor-pointer ${
+                    user ? "" : "hidden"
+                  }`}
+                >
+                  Perfil
+                </li>
+              </Link>
               <Link to="/login">
                 <li
                   className={`p-4 uppercase duration-300 hover:text-primary hover:scale-110 cursor-pointer ${
