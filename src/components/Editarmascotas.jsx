@@ -49,7 +49,7 @@ const EditarMascota = () => {
   }, [id]);
 
   const generarQR = (id) => {
-    setQrLink(`https://cgg1g678-5173.use2.devtunnels.ms/Mascotas/${id}`); // Actualiza con tu URL base
+    setQrLink(`https://pet-safe-app.vercel.app/Mascotas/${id}`); // Actualiza con tu URL base
   };
 
   const handleEditarMascota = async (e) => {
